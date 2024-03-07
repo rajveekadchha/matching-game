@@ -7,7 +7,9 @@
 .container .pinkFrontCard {
     transform: rotateY(90deg);
     transition: all ease-in 0.2s;
-    position: relative;
+    position: absolute;
+        top: 15px;
+        left: 20px;
 }
 
 .flipped .pinkFrontCard {
@@ -43,7 +45,9 @@
 .container .blueFrontCard {
     transform: rotateY(90deg);
     transition: all ease-in 0.2s;
-    position: relative;
+    position: absolute;
+        top: 15px;
+        left: 20px;
 }
 
 .flipped .blueFrontCard {

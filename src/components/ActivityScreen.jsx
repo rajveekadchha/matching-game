@@ -1,19 +1,9 @@
 import bgstyle from "./IntroScreen.module.css";
 import background from "../assets/intro.png";
-import { ReactComponent as PinkCard } from "../assets/common/pinkCard.svg";
-import { ReactComponent as BlueCard } from "../assets/common/blueCard.svg";
 import { ReactComponent as Apple } from "../assets/common/apple.svg";
 import { ReactComponent as AlphaA } from "../assets/common/alphaA.svg";
 import { ReactComponent as Orange } from "../assets/common/orange.svg";
 import { ReactComponent as AlphaO } from "../assets/common/alphaO.svg";
-import { ReactComponent as Banana } from "../assets/common/banana.svg";
-import { ReactComponent as AlphaB } from "../assets/common/alphaB.svg";
-import { ReactComponent as Mango } from "../assets/common/mango.svg";
-import { ReactComponent as AlphaM } from "../assets/common/alphaM.svg";
-import { ReactComponent as Strawberry } from "../assets/common/strawberry.svg";
-import { ReactComponent as AlphaS } from "../assets/common/alphaS.svg";
-import { ReactComponent as Grapes } from "../assets/common/grape.svg";
-import { ReactComponent as AlphaG } from "../assets/common/alphaG.svg";
 import { ReactComponent as Arrow1 } from "../assets/arrow1.svg";
 import { ReactComponent as Help1 } from "../assets/help1.svg";
 import { ReactComponent as Arrow2 } from "../assets/arrow2.svg";
@@ -52,16 +42,15 @@ export default function ActivityScreen() {
   const [fruitCards, setFruitCards] = useState([...Fcards]);
   const [alphaCards, setAlphaCards] = useState([...Acards]);
 
-  function shuffleCards(cards, name) {
-    let a = [...cards]
-      //   .sort(() => Math.random() * 100)
-      .map((card) => ({ ...card, id: Math.random() }));
-    if ((name = "fruits")) {
-      setFruitCards(a);
-    } else {
-      setAlphaCards(a);
-    }
-  }
+  //   function shuffleCards(cards, name) {
+  //     let a = [...cards]
+  //       .map((card) => ({ ...card, id: Math.random() }));
+  //     if ((name = "fruits")) {
+  //       setFruitCards(a);
+  //     } else {
+  //       setAlphaCards(a);
+  //     }
+  //   }
 
   function handleChoice(card, type) {
     if (type === "pink") {
@@ -99,8 +88,6 @@ export default function ActivityScreen() {
           });
         });
         setMatchedNo(matchedNo + 1);
-        // setTimeout(() => setIsMatched(false), 1000);
-        // reset();
       } else {
         setTimeout(() => reset(), 1000);
       }

@@ -1,9 +1,8 @@
 import background from "../assets/intro.png";
 import styles from "./IntroScreen.module.css";
-import StartScreen from "./StartScreen";
+import StartScreen from "./InstructionScreen";
 
 export default function IntroScreen() {
-  function changeText() {}
   return (
     <div>
       <div

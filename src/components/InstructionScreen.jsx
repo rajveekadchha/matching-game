@@ -28,16 +28,13 @@ export default function StartScreen() {
   const [step, setstep] = useState(1);
 
   function DecStep() {
-    if (step != 5) {
-      // console.log(step);
+    if (step !== 5) {
       setstep(step - 1);
     }
-    // console.log(step);
     setstep(step - 1);
   }
 
   function IncStep() {
-    console.log(step);
     setstep(step + 1);
   }
   return (
@@ -82,7 +79,7 @@ export default function StartScreen() {
               <div className={styles.cardContent}>
                 <h1 className={styles.CardTextSecond}>If they’re same</h1>
                 <h1 className={styles.CardText}>Its a match !</h1>
-                <h1 className={styles.CardTextSecond}>otherwise retry :(</h1>
+                <h1 className={styles.CardTextSecond}>otherwise retry :</h1>
               </div>
             </div>
           </div>
@@ -90,8 +87,12 @@ export default function StartScreen() {
       ) : (
         " "
       )}
-      {step != 1 ? <Back className={styles.backStyle} onClick={DecStep} /> : ""}
-      {(step > 3) & (step != 6) ? (
+      {step !== 1 ? (
+        <Back className={styles.backStyle} onClick={DecStep} />
+      ) : (
+        ""
+      )}
+      {(step > 3) & (step !== 6) ? (
         <div>
           <InitProgressBar className={styles.progressbarStyle} />
           <InitProgressBarBanana className={styles.progressBarBananaStyle} />

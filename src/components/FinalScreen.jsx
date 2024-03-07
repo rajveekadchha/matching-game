@@ -1,4 +1,3 @@
-import oldstyles from "./StartScreen.module.css";
 import { ReactComponent as ResultrogressBar } from "../assets/common/resultProgressBar.svg";
 import { ReactComponent as Banana } from "../assets/banana.svg";
 import { ReactComponent as ResultBananas } from "../assets/resultBananas.svg";
@@ -6,7 +5,7 @@ import { ReactComponent as ResultScoreCard } from "../assets/resultScoreCard.svg
 import { ReactComponent as ResultMonkey } from "../assets/resultMonkey.svg";
 import styles from "./FinalScreen.module.css";
 import { useState } from "react";
-import StartScreen from "./startScreen";
+import StartScreen from "./InstructionScreen";
 export default function FinalScreen({ matchedNo }) {
   const [reset, setReset] = useState(false);
 
