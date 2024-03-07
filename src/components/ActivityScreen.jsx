@@ -123,31 +123,53 @@ export default function ActivityScreen() {
         style={{ backgroundImage: `url(${background})` }}
         className={bgstyle.bgImg}
       >
-        {matchedNo === 1 ? (
+        {matchedNo === 6 ? (
           <FinalScreen matchedNo={matchedNo} />
         ) : (
           <>
             <div className={styles.defaultCardArrangmentContainer}>
               <div className={styles.defaultCardArrangment}>
                 {fruitCards.map((Card) => (
-                  <SingleCardComponent
-                    back="pink"
-                    Card={Card}
-                    front={Card.front}
-                    handleChoice={handleChoice}
-                    flipped={Card === choiceOne || Card.matched === true}
-                  />
+                  <>
+                    {!choiceOne && !choiceTwo && matchedNo === 0 ? (
+                      <>
+                        <Arrow1 className={styles.arrow1} />
+                        <Help1 className={styles.help1} />
+                      </>
+                    ) : (
+                      ""
+                    )}
+
+                    <SingleCardComponent
+                      back="pink"
+                      Card={Card}
+                      front={Card.front}
+                      handleChoice={handleChoice}
+                      flipped={Card === choiceOne || Card.matched === true}
+                    />
+                  </>
                 ))}
               </div>
               <div className={styles.defaultCardArrangment}>
                 {alphaCards.map((Card) => (
-                  <SingleCardComponent
-                    back="blue"
-                    Card={Card}
-                    front={Card.front}
-                    handleChoice={handleChoice}
-                    flipped={Card === choiceTwo || Card.matched === true}
-                  />
+                  <>
+                    {choiceOne && !choiceTwo && matchedNo === 0 ? (
+                      <>
+                        <Arrow2 className={styles.arrow2} />
+                        <Help2 className={styles.help2} />
+                      </>
+                    ) : (
+                      ""
+                    )}
+
+                    <SingleCardComponent
+                      back="blue"
+                      Card={Card}
+                      front={Card.front}
+                      handleChoice={handleChoice}
+                      flipped={Card === choiceTwo || Card.matched === true}
+                    />
+                  </>
                 ))}
               </div>
             </div>

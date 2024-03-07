@@ -5,6 +5,31 @@
     top: 30%;
 }
 
+.help1 {
+    position: absolute;
+    top: -21%;
+    left: 41%;
+
+}
+
+.arrow1 {
+    position: absolute;
+    top: -14%;
+    left: 27%;
+}
+
+.help2 {
+    position: absolute;
+    bottom: -14%;
+    left: 41%;
+    z-index: 1;
+}
+
+.arrow2 {
+    position: absolute;
+    bottom: -8%;
+    right: 23%;
+}
 .defaultCardArrangment {
     display: flex;
     flex-wrap: wrap;
