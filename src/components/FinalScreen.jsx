@@ -6,7 +6,7 @@ import { ReactComponent as ResultScoreCard } from "../assets/resultScoreCard.svg
 import { ReactComponent as ResultMonkey } from "../assets/resultMonkey.svg";
 import styles from "./FinalScreen.module.css";
 import { useState } from "react";
-import StartScreen from "./StartScreen";
+import StartScreen from "./startScreen";
 export default function FinalScreen({ matchedNo }) {
   const [reset, setReset] = useState(false);
 
