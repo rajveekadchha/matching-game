@@ -1,0 +1,57 @@
+.banana {}
+
+.resultrogressBar {
+    position: absolute;
+    width: 940px;
+    top: 43.75px;
+    left: 22%;
+    z-index: 1;
+}
+
+.resultprogressBarBanana {
+    position: absolute;
+    width: 145px;
+    top: 16px;
+    left: 71%;
+    scale: 1.7;
+    transform: rotate(18deg);
+    z-index: 1;
+}
+
+.resultBananas {
+    position: absolute;
+    position: absolute;
+    left: 18%;
+    top: 24%;
+    transform: rotate(355deg);
+}
+
+.resultScoreCard {
+    position: absolute;
+    left: 32%;
+    top: 12%;
+}
+
+.resultMonkey {
+    position: absolute;
+    top: 46%;
+    left: 41%;
+}
+
+.resultText {
+    position: absolute;
+    width: 388px;
+    height: 99px;
+    top: 337.82px;
+    left: 561.76px;
+    transform: rotate(0.44deg);
+    font-family: Nunito;
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 99px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+
+
+}

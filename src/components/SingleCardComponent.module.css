@@ -1,0 +1,76 @@
+.container {
+    position: relative;
+    height: 300px;
+}
+
+/* front of pinkcard */
+.container .pinkFrontCard {
+    transform: rotateY(90deg);
+    transition: all ease-in 0.2s;
+    position: relative;
+}
+
+.flipped .pinkFrontCard {
+    transform: rotateY(0deg);
+    transition-delay: 0.2s;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+.hideIt .pinkFrontCard {
+    opacity: 0;
+}
+
+/* back of pinkcard */
+
+.container .pinkBackCard {
+    transform: rotateY(0deg);
+    transition: all ease-in 0.2s;
+    transition-delay: 0.2s;
+}
+
+.flipped .pinkBackCard {
+    transform: rotateY(90deg);
+    transition-delay: 0s;
+}
+
+.hideIt .pinkBackCard {
+    opacity: 0;
+}
+
+/* front of bluecard */
+.container .blueFrontCard {
+    transform: rotateY(90deg);
+    transition: all ease-in 0.2s;
+    position: relative;
+}
+
+.flipped .blueFrontCard {
+    transform: rotateY(0deg);
+    transition-delay: 0.2s;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+.hideIt .blueFrontCard {
+    opacity: 0;
+}
+
+/* back of bluecard */
+
+.container .blueBackCard {
+    transform: rotateY(0deg);
+    transition: all ease-in 0.2s;
+    transition-delay: 0.2s;
+}
+
+.flipped .blueBackCard {
+    transform: rotateY(90deg);
+    transition-delay: 0s;
+}
+
+.hideIt .blueBackCard {
+    opacity: 0;
+}

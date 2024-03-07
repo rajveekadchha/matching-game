@@ -1,0 +1,65 @@
+.defaultCardArrangmentContainer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 30%;
+}
+
+.defaultCardArrangment {
+    display: flex;
+    flex-wrap: wrap;
+    width: 42%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.choiceOne {
+    position: absolute;
+    top: 30%;
+    transform: rotate(-15deg);
+    left: 23%;
+    scale: 1.5;
+}
+
+
+
+.choiceTwo {
+    position: absolute;
+    top: 48%;
+    scale: 1.5;
+    left: 45%;
+    transform: rotate(23deg);
+
+}
+
+.matchText {
+    position: absolute;
+    width: 723px;
+    height: 131px;
+    top: 119px;
+    left: 711px;
+    border: 7px;
+    font-family: Nunito;
+    font-size: 96px;
+    font-weight: 800;
+    line-height: 131px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: rgba(239, 143, 53, 1);
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white;
+}
+
+.NextBtn {
+    position: absolute;
+    bottom: 6%;
+    right: 5%;
+}
