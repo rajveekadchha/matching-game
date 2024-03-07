@@ -27,7 +27,7 @@ export default function FinalScreen({ matchedNo }) {
             onClick={resetAll}
             className={styles.resultScoreCard}
           />
-          <text className={styles.resultText}>{matchedNo} Banana’s</text>
+          <h5 className={styles.resultText}>{matchedNo} Banana’s</h5>
           <ResultMonkey className={styles.resultMonkey} />
         </>
       )}

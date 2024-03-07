@@ -10,6 +10,7 @@ import { ReactComponent as Arrow2 } from "../assets/arrow2.svg";
 import { ReactComponent as Help2 } from "../assets/help2.svg";
 import { ReactComponent as NextBtn } from "../assets/next.svg";
 import SingleCardComponent from "./SingleCardComponent";
+import { useCallback } from "react";
 import styles from "./ActivityScreen.module.css";
 import { useEffect, useState } from "react";
 import FinalScreen from "./FinalScreen";
@@ -65,6 +66,11 @@ export default function ActivityScreen() {
     }
   }
 
+  const reset = useCallback(() => {
+    setchoiceOne(null);
+    setChoiceTwo(null);
+  }, []);
+
   useEffect(() => {
     if (choiceOne && choiceTwo) {
       if (choiceOne.data === choiceTwo.data) {
@@ -87,18 +93,19 @@ export default function ActivityScreen() {
             }
           });
         });
-        setMatchedNo(matchedNo + 1);
+        setMatchedNo((prevCount) => prevCount + 1);
       } else {
         setTimeout(() => reset(), 1000);
+        setTurns((prevCount) => prevCount + 1);
       }
     }
-  }, [choiceOne, choiceTwo]);
+  }, [choiceOne, choiceTwo, matchedNo, reset]);
 
-  function reset() {
-    setchoiceOne(null);
-    setChoiceTwo(null);
-    setTurns(turns + 1);
-  }
+  //   function reset() {
+  //     setchoiceOne(null);
+  //     setChoiceTwo(null);
+  //     setTurns(turns + 1);
+  //   }
 
   function doNext() {
     reset();
@@ -110,7 +117,7 @@ export default function ActivityScreen() {
         style={{ backgroundImage: `url(${background})` }}
         className={bgstyle.bgImg}
       >
-        {matchedNo === 6 ? (
+        {matchedNo === 6 || turns > 3 ? (
           <FinalScreen matchedNo={matchedNo} />
         ) : (
           <>
