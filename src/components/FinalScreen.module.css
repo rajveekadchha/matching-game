@@ -50,6 +50,15 @@
     letter-spacing: 0.02em;
     text-align: center;
     color: rgba(255, 255, 255, 1);
+    margin: 0;
+    }
 
-
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
 }

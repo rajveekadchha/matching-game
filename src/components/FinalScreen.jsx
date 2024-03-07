@@ -18,6 +18,7 @@ export default function FinalScreen({ matchedNo }) {
         <StartScreen />
       ) : (
         <>
+          <div className={styles.overlay}></div>
           <div>
             <ResultrogressBar className={styles.resultrogressBar} />
             <Banana className={styles.resultprogressBarBanana} />
@@ -27,7 +28,7 @@ export default function FinalScreen({ matchedNo }) {
             onClick={resetAll}
             className={styles.resultScoreCard}
           />
-          <h5 className={styles.resultText}>{matchedNo} Banana’s</h5>
+          <h5 className={styles.resultText}>{matchedNo} Bananas</h5>
           <ResultMonkey className={styles.resultMonkey} />
         </>
       )}

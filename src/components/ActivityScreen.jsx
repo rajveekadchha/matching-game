@@ -99,13 +99,8 @@ export default function ActivityScreen() {
         setTurns((prevCount) => prevCount + 1);
       }
     }
-  }, [choiceOne, choiceTwo, matchedNo, reset]);
-
-  //   function reset() {
-  //     setchoiceOne(null);
-  //     setChoiceTwo(null);
-  //     setTurns(turns + 1);
-  //   }
+    // eslint-disable-next-line
+  }, [choiceOne, choiceTwo]);
 
   function doNext() {
     reset();
@@ -170,8 +165,8 @@ export default function ActivityScreen() {
             <div className={isMatched ? styles.overlay : ""}></div>
             {isMatched ? (
               <>
-                <div className={styles.choiceOne}>{choiceOne.front}</div>
-                <div className={styles.choiceTwo}>{choiceTwo.front}</div>
+                <div className={styles.choiceOne}>{choiceOne?.front}</div>
+                <div className={styles.choiceTwo}>{choiceTwo?.front}</div>
                 <h4 className={styles.matchText}> It’s a match !</h4>
                 <div className={styles.NextBtn} onClick={doNext}>
                   <NextBtn />

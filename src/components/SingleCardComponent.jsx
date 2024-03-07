@@ -2,7 +2,13 @@ import { ReactComponent as PinkCard } from "../assets/common/pinkCard.svg";
 import { ReactComponent as BlueCard } from "../assets/common/blueCard.svg";
 import styles from "./SingleCardComponent.module.css";
 
-export default function SingleCardComponent({ back, Card, front, handleChoice, flipped }) {
+export default function SingleCardComponent({
+  back,
+  Card,
+  front,
+  handleChoice,
+  flipped,
+}) {
   function flipCard() {
     handleChoice(Card, back);
   }
