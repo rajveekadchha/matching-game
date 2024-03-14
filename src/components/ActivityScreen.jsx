@@ -32,9 +32,9 @@ export default function ActivityScreen() {
   ];
 
   let Acards = [
-    { front: <AlphaO />, data: "apple", matched: false },
+    { front: <AlphaA />, data: "apple", matched: false },
     { front: <AlphaO />, data: "orange", matched: false },
-    { front: <AlphaA />, data: "orange1", matched: false },
+    { front: <AlphaO />, data: "orange1", matched: false },
     { front: <AlphaA />, data: "apple1", matched: false },
     { front: <AlphaA />, data: "apple2", matched: false },
     { front: <AlphaO />, data: "orange2", matched: false },
